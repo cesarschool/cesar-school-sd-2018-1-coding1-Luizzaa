@@ -14,8 +14,18 @@
 bool isPalindrome (char sentence[], int length) {
     printf("\nisPalindrome::START: %s, %d\n", sentence, length);
 
-    // TODO: YOUR CODE HERE!
-    
+    int p1 = 0;
+    int p2 = length -1;
+    while(sentence[p1] == sentence[p2]){
+    if (p1 == p2 || p1 > p2){
+        printf("true");
+        printf ("\nisPalindrome:: END\n");
+        return true;
+    }
+    p1 = p1 +1;
+    p2 = p2 -1;
+    }
+    printf("false");
     printf("\nisPalindrome::END\n");
     return false;
 }
